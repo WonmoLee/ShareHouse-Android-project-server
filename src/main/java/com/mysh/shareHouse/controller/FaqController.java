@@ -15,10 +15,18 @@ public class FaqController {
 	@Autowired
 	private FaqService faqService;
 	
-	@GetMapping("/faq")
-	public List<Faq> findInterview() {
+	@GetMapping("/mfaq/moveIn")
+	public List<Faq> findFaqMoveIn() {
 		
-		List<Faq> faqList = faqService.findAll();
+		List<Faq> faqList = faqService.moveInFindAll();
+		
+		return faqList;
+	}
+	
+	@GetMapping("/mfaq/contract")
+	public List<Faq> findContract() {
+		
+		List<Faq> faqList = faqService.contractFindAll();
 		
 		return faqList;
 	}

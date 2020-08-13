@@ -6,5 +6,7 @@ import com.mysh.shareHouse.model.Faq;
 
 public interface FaqRepository {
 
-	public List<Faq> findAll();
+	public List<Faq> moveInFindAll();
+	public List<Faq> contractFindAll();
+	
 }
